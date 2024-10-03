@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="logo">QUIZ<span>Mania</span></h1>
+        <button class="exit-button btn" onclick="exitQuiz()">Exit Quiz</button>
+    </div>
+    <hr>
+
+    <main>
+        <!-- Start quiz page -->
+        <div id="categorySelection">
+            <h1>Welcome to <span class="logo">QUIZ<span>Mania</span></span> </h1>
+
+            <div class="rules-wrapper">
+                <p>Please read all the rules about this quiz before you start.</p>
+                <p class="text-brand" onclick="openModal()">Quiz rules</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" onchange="checkInputs()">
+                </label>
+                <label>Please select topic to continue
+                    <br />
+
+                    <div class="radio-group">
+                        <input type="radio" id="js_basics" name="quizTopic" value="JavaScript Basics"
+                            onchange="checkInputs()">
+                        <label for="js_basics">JavaScript Basics</label>
+                    </div>
+                </label>
+            </div>
+
+            <button class="start" onclick="startQuiz('js_basics')" disabled>Start Quiz</button>
+        </div>
+
+        <!--Rules Modal -->
+        <div id="rulesModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Quiz Rules</h2>
+                <p class="rules-head">10-Second Timer</p>
+                <ul>
+                    <li>Each question comes with a 10-second timer.</li>
+                    <li>If you don’t answer within the time limit, the app will automatically move to the next question.
+                    </li>
+                </ul>
+                <p class="rules-head">Manual Navigation</p>
+                <ul>
+                    <li>You can navigate to the next question manually before the timer expires.</li>
+                    <li>Use the "Next" button to move ahead if you’re ready before the timer runs out.</li>
+                </ul>
+                <p class="rules-head">Final Score and Performance Message</p>
+                <ul>
+                    <li>After all questions are answered, your final score will be displayed.</li>
+                    <li>Based on your performance, you will receive a personalized message:</li>
+                    <ul>
+                        <li>Great job!: If you score <strong>above 80%.</strong></li>
+                        <li>Well done!: If you score <strong>between 60% and 80%.</strong></li>
+                        <li>Keep practicing!: If you score <strong>below 60%.</strong></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Quiz question -->
+        <div id="quiz" style="display: none;">
+            <div class="progress-bar">
+                <span id="question-info"></span>
+                <span id="timeLeft" class="text-brand"></span>
+            </div>
+            <div class="progress-fill" style="width: 60%;"></div>
+
+            <div class="question-container">
+                <p id="question-number"></p>
+                <p id="question"></p>
+
+                <div id="options">
+                    <div class="radio-group">
+                        <input type="radio" id="option1" name="quizOption" value="Option 1" onchange="checkSelection()">
+                        <label for="option1">Option 1</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="option2" name="quizOption" value="Option 2" onchange="checkSelection()">
+                        <label for="option2">Option 2</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="option3" name="quizOption" value="Option 3" onchange="checkSelection()">
+                        <label for="option3">Option 3</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="option4" name="quizOption" value="Option 4" onchange="checkSelection()">
+                        <label for="option4">Option 4</label>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button class="next-button" id="nextButton" onclick="nextQuestion()" disabled>Next</button>
+                    <button class="skip-button" onclick="nextQuestion()">Skip this question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result page -->
+        <div id="result" style="display: none;">
+            <h1 id="result-head"></h1>
+            <p>You successfully completed the Quiz and holds</p>
+            <div class="score-percent-wrapper">
+                <h2>Your Score</h2>
+                <h1 id="score-percent"></h1>
+                <h2 id="remark"></h2>
+                
+            </div>
+            <div class="score-container">
+                <p>Out of 10 questions</p>
+                <p class="count">
+                    <span class="correct"></span> Correct
+                    <span class="incorrect"></span> Incorrect
+                    <span class="notAnswered"></span> Not answered
+                </p>
+            </div>
+            <button onclick="exitQuiz()" class="btn">Retake Quiz</button>
+        </div>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>

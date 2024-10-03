@@ -1,0 +1,130 @@
+{
+    "categories": [
+        {
+            "id": "js_basics",
+            "name": "JavaScript Basics",
+            "questions": [
+                {
+                    "id": "q1",
+                    "question": "What is the correct syntax for referring to an external script called 'script.js'?",
+                    "options": [
+                        "A. <script name='script.js'>",
+                        "B. <script href='script.js'>",
+                        "C. <script src='script.js'>",
+                        "D. <script file='script.js'>"
+                    ],
+                    "correctAnswer": "C",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q2",
+                    "question": "Which company developed JavaScript?",
+                    "options": [
+                        "A. Microsoft",
+                        "B. Netscape",
+                        "C. Google",
+                        "D. Mozilla"
+                    ],
+                    "correctAnswer": "B",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q3",
+                    "question": "Which of the following is a JavaScript data type?",
+                    "options": [
+                        "A. Number",
+                        "B. String",
+                        "C. Boolean",
+                        "D. All of the above"
+                    ],
+                    "correctAnswer": "D",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q4",
+                    "question": "How do you create a function in JavaScript?",
+                    "options": [
+                        "A. function = myFunction()",
+                        "B. function myFunction()",
+                        "C. function:myFunction()",
+                        "D. create myFunction()"
+                    ],
+                    "correctAnswer": "B",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q5",
+                    "question": "What does 'console.log()' do?",
+                    "options": [
+                        "A. Displays a message in the console",
+                        "B. Shows an alert dialog",
+                        "C. Writes to a file",
+                        "D. Sends data to the server"
+                    ],
+                    "correctAnswer": "A",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q6",
+                    "question": "Which operator is used to assign a value to a variable?",
+                    "options": [
+                        "A. =",
+                        "B. ==",
+                        "C. ===",
+                        "D. :="
+                    ],
+                    "correctAnswer": "A",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q7",
+                    "question": "What will the following code output: console.log(typeof 'Hello World');?",
+                    "options": [
+                        "A. string",
+                        "B. String",
+                        "C. 'Hello World'",
+                        "D. 'object'"
+                    ],
+                    "correctAnswer": "A",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q8",
+                    "question": "How do you create a variable in JavaScript?",
+                    "options": [
+                        "A. var myVariable;",
+                        "B. create myVariable;",
+                        "C. variable myVariable;",
+                        "D. myVariable := ;"
+                    ],
+                    "correctAnswer": "A",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q9",
+                    "question": "Which of the following is not a JavaScript loop?",
+                    "options": [
+                        "A. for",
+                        "B. while",
+                        "C. repeat",
+                        "D. do...while"
+                    ],
+                    "correctAnswer": "C",
+                    "timeLimit": 10
+                },
+                {
+                    "id": "q10",
+                    "question": "What keyword is used to declare a constant variable in JavaScript?",
+                    "options": [
+                        "A. const",
+                        "B. constant",
+                        "C. var",
+                        "D. let"
+                    ],
+                    "correctAnswer": "A",
+                    "timeLimit": 10
+                }
+            ]
+        }
+    ]
+}
